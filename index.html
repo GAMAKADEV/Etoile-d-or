@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile d'Or - Restaurant Gastronomique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>L'Étoile d'Or</h1>
+                <span>Restaurant Gastronomique</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#chefs">Nos Chefs</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Découvrez l'Excellence Culinaire</h1>
+            <p>Une expérience gastronomique unique au cœur de Paris, où tradition et innovation se rencontrent</p>
+            <button class="cta-button" onclick="scrollToReservation()">Réserver une table</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Notre Histoire</h2>
+                    <p>Fondé en 1985, L'Étoile d'Or incarne l'élégance et la excellence de la gastronomie française. Notre chef étoilé Michelin propose une cuisine raffinée qui célèbre les produits frais de saison dans un cadre somptueux.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>38</h3>
+                            <p>Années d'Excellence</p>
+                        </div>
+                        <div class="stat">
+                            <h3>★★★</h3>
+                            <p>Étoiles Michelin</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50k+</h3>
+                            <p>Clients Satisfaits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Notre Menu Signature</h2>
+            <p class="section-subtitle">Une sélection de plats d'exception préparés avec passion</p>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="starters">Entrées</button>
+                <button class="category-btn" data-category="mains">Plats Principaux</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="wines">Carte des Vins</button>
+            </div>
+
+            <div class="menu-content">
+                <!-- Entrées -->
+                <div class="menu-category active" id="starters">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1546039907-7fa05f864c02?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foie Gras">
+                            <div class="menu-info">
+                                <h3>Foie Gras Poêlé</h3>
+                                <p>Foie gras mi-cuit, chutney de figues, brioche toastée</p>
+                                <span class="price">28€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Saint-Jacques">
+                            <div class="menu-info">
+                                <h3>Saint-Jacques Croustillantes</h3>
+                                <p>Noix de Saint-Jacques, céleri-rave, émulsion de crustacés</p>
+                                <span class="price">32€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Caviar">
+                            <div class="menu-info">
+                                <h3>Caviar Osciètre</h3>
+                                <p>Caviar frais, blinis maison, crème aigre</p>
+                                <span class="price">45€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats Principaux -->
+                <div class="menu-category" id="mains">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Homard">
+                            <div class="menu-info">
+                                <h3>Homard Bleu Rôti</h3>
+                                <p>Homard entier, beurre aux herbes, légumes de saison</p>
+                                <span class="price">65€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wagyu">
+                            <div class="menu-info">
+                                <h3>Wagyu A5 Kobe</h3>
+                                <p>Tranche de wagyu, purée de truffe, jus de viande réduit</p>
+                                <span class="price">95€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dorade">
+                            <div class="menu-info">
+                                <h3>Dorade Royale</h3>
+                                <p>Dorade entière, citron confit, olives lucques</p>
+                                <span class="price">42€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category" id="desserts">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Soufflé">
+                            <div class="menu-info">
+                                <h3>Soufflé au Grand Marnier</h3>
+                                <p>Soufflé chaud, crème anglaise à la vanille</p>
+                                <span class="price">15€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tarte">
+                            <div class="menu-info">
+                                <h3>Tarte Tatin</h3>
+                                <p>Pommes caramélisées, glace vanille bourbon</p>
+                                <span class="price">14€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chocolat">
+                            <div class="menu-info">
+                                <h3>Fondant au Chocolat</h3>
+                                <p>Chocolat 72%, cœur coulant, glace pistache</p>
+                                <span class="price">16€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte des Vins -->
+                <div class="menu-category" id="wines">
+                    <div class="wine-list">
+                        <div class="wine-category">
+                            <h3>Champagne & Spiritueux</h3>
+                            <div class="wine-item">
+                                <span>Dom Pérignon 2012</span>
+                                <span>350€</span>
+                            </div>
+                            <div class="wine-item">
+                                <span>Krug Grande Cuvée</span>
+                                <span>280€</span>
+                            </div>
+                        </div>
+                        <div class="wine-category">
+                            <h3>Vins Rouges</h3>
+                            <div class="wine-item">
+                                <span>Château Margaux 2015</span>
+                                <span>450€</span>
+                            </div>
+                            <div class="wine-item">
+                                <span>Romanée-Conti 2017</span>
+                                <span>1200€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galerie Photo</h2>
+            <p class="section-subtitle">Un aperçu de notre univers gastronomique</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Plat gastronomique">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ambiance">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1564759298141-cef86f51d4d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cuisine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs">
+        <div class="container">
+            <h2>Nos Chefs Étoilés</h2>
+            <p class="section-subtitle">Rencontrez les artistes derrière nos créations</p>
+            
+            <div class="chefs-grid">
+                <div class="chef-card">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chef Principal">
+                    <div class="chef-info">
+                        <h3>Michel Lambert</h3>
+                        <p>Chef Principal</p>
+                        <span>★★★ Étoiles Michelin</span>
+                        <p>Avec 25 ans d'expérience, Michel excelle dans la cuisine française moderne</p>
+                    </div>
+                </div>
+                <div class="chef-card">
+                    <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chef Pâtissier">
+                    <div class="chef-info">
+                        <h3>Sophie Martin</h3>
+                        <p>Chef Pâtissier</p>
+                        <span>Meilleur Ouvrier de France</span>
+                        <p>Spécialiste en desserts innovants et sublimes créations sucrées</p>
+                    </div>
+                </div>
+                <div class="chef-card">
+                    <img src="https://images.unsplash.com/photo-1583394293214-093e19d8e973?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sommelier">
+                    <div class="chef-info">
+                        <h3>Jean-Pierre Dubois</h3>
+                        <p>Sommelier</p>
+                        <span>Meilleur Sommelier d'Europe</span>
+                        <p>Expert en accords mets-vins avec une cave de 5000 références</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <h2>Réservez Votre Table</h2>
+            <p class="section-subtitle">Réservez en ligne pour une expérience inoubliable</p>
+            
+            <div class="reservation-form">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom Complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Nombre de Personnes</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Sélectionnez</option>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes</option>
+                                <option value="6">6+ personnes</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Heure</label>
+                            <select id="time" name="time" required>
+                                <option value="">Sélectionnez</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message Spécial</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Occasion spéciale, allergies, préférences..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Réserver Maintenant</button>
+                </form>
+            </div>
+            
+            <div class="reservation-info">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Téléphone</h4>
+                        <p>+33 1 42 68 53 53</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>reservation@letoiledor.fr</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horaires</h4>
+                        <p>Lun-Sam: 19h-23h | Dim: 12h-15h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>15 Rue de l'Abbaye<br>75006 Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+33 1 42 68 53 53</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@letoiledor.fr</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991441551631!2d2.331645315674397!3d48.85661007928747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2s15%20Rue%20de%20l'Abbaye%2C%2075006%20Paris%2C%20France!5e0!3m2!1sfr!2sfr!4v1650000000000!5m2!1sfr!2sfr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>L'Étoile d'Or</h3>
+                    <p>Restaurant gastronomique trois étoiles Michelin au cœur de Paris, offrant une expérience culinaire d'exception.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Réservation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Horaires</h4>
+                    <ul>
+                        <li>Lundi - Samedi: 19h - 23h</li>
+                        <li>Dimanche: 12h - 15h</li>
+                        <li>Fermé le mardi</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 L'Étoile d'Or. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
